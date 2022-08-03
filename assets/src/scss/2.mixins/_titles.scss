@@ -1,0 +1,77 @@
+// ==========================================================================
+// MIXINS - Titles
+// ==========================================================================
+
+// Style mixins
+// ==========================================================================
+
+@mixin title-1 {
+	font: 700 rem(40) $font-family-title;
+	color: $black;
+
+	@include min-width($mobile-threshold) {
+		font-size: rem(50);
+	}
+	@include min-width($tablet-threshold) {
+		font-size: rem(80);
+	}
+}
+
+@mixin title-2 {
+	font: 600 rem(35) $font-family-title;
+	color: $black;
+
+	@include min-width($mobile-threshold) {
+		font-size: rem(45);
+	}
+	@include min-width($tablet-threshold) {
+		font-size: rem(70);
+	}
+}
+
+@mixin title-3 {
+	font: 600 rem(30) $font-family-title;
+	color: $black;
+
+	@include min-width($mobile-threshold) {
+		font-size: rem(40);
+	}
+	@include min-width($tablet-threshold) {
+		font-size: rem(50);
+	}
+}
+
+@mixin title-4 {
+	font: 600 rem(25) $font-family-title;
+
+	@include min-width($mobile-threshold) {
+		font-size: rem(35);
+	}
+	@include min-width($tablet-threshold) {
+		font-size: rem(40);
+	}
+}
+
+// Steps title
+@mixin title-5 {
+	font: 500 rem(35) $font-family-title;
+
+	@include min-width($mobile-threshold) {
+		font-size: rem(50);
+	}
+	@include min-width($tablet-threshold) {
+		font-size: rem(50);
+	}
+}
+
+// Categorie title on grid
+@mixin title-6 {
+	font: 500 rem(18) $font-family-title;
+
+	@include min-width($mobile-threshold) {
+		font-size: rem(18);
+	}
+	@include min-width($tablet-threshold) {
+		font-size: rem(20);
+	}
+}

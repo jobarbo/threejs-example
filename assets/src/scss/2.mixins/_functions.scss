@@ -1,0 +1,27 @@
+// ==========================================================================
+// MIXINS - Functions
+// ==========================================================================
+
+@use 'sass:math';
+// - - - Strip units - - -
+@function strip-unit($value) {
+	@return math.div($value, 1);
+}
+
+// - - - PX to EM - - -
+// divide by 16
+@function em($px) {
+	@return #{strip-unit(math.div($px, $function-size-default))}em;
+}
+
+// - - - EM to PX - - -
+// multiply by 16
+@function px($em) {
+	@return #{strip-unit($em * $function-size-default)}px;
+}
+
+// - - - PX to REM - - -
+// divide by 16
+@function rem($px) {
+	@return #{strip-unit(math.div($px, $function-size-default))}rem;
+}

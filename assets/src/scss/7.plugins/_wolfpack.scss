@@ -1,0 +1,109 @@
+// ==========================================================================
+// WOLFPACK
+// ==========================================================================
+
+// BASIC
+:root {
+	--backgroundcolor: #ffffff;
+	--textcolor: #000000;
+}
+
+[data-scroll-section] {
+	opacity: 0;
+	pointer-events: none;
+}
+
+body {
+	transition: background-color 0.7s ease;
+	background-color: var(--backgroundcolor);
+}
+
+body,
+.wolfpack-container {
+	height: 100vh;
+}
+
+.scroll-content {
+	overflow: hidden !important;
+}
+
+// MARQUEE
+[data-marquee-container] {
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+[data-marquee-content] {
+	display: flex;
+	white-space: nowrap;
+	animation: marquee linear infinite running;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translate(-100%);
+	}
+}
+
+// STAY
+[data-stay] {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+// CURSOR
+[data-cursor-container] {
+	display: flex;
+	opacity: 1;
+	pointer-events: none;
+}
+
+[data-cursor-pointer] {
+	transform: translate(0px, 0px);
+	position: fixed;
+	z-index: 1000;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	mix-blend-mode: difference;
+
+	svg {
+		transition: 0.5s ease;
+	}
+}
+
+[data-cursor] {
+	cursor: none;
+}
+
+@include max-width($tablet-threshold) {
+	[data-cursor] {
+		display: none !important;
+	}
+}
+
+// SEPARATE CHARACTERS
+[data-separate-characters] {
+	align-items: flex-start;
+	flex-direction: column;
+	.separate-character__letter {
+		display: inline-block;
+	}
+}
+
+// SEPARATE WORDS
+[data-separate-words] {
+	align-items: flex-start;
+	flex-direction: column;
+	.separate-words__word {
+		display: inline-block;
+	}
+}

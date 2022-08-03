@@ -1,0 +1,81 @@
+// ==========================================================================
+//  VARIABLES
+// ==========================================================================
+
+// Colors
+// ==========================================================================
+
+$black: #1f1f1f;
+$gray: #707070;
+$white: #f1ebe5;
+$sand: #e6e0d9;
+$khaki: #d8d8c8;
+
+//  Typography
+// ==========================================================================
+
+// - - - Font-face, for locally loaded font - - -
+@mixin font-face($family, $path, $weight: normal, $style: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$path}.otf');
+		src: url('#{$path}.eot?#iefix') format('embedded-opentype'), url('#{$path}.woff2') format('woff2'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+// Style mixins
+// ==========================================================================
+@include font-face(poppins, '../fonts/poppins/Poppins-Thin', 300, normal);
+@include font-face(poppins, '../fonts/poppins/Poppins-Regular', 400, normal);
+@include font-face(poppins, '../fonts/poppins/Poppins-Medium', 500, normal);
+@include font-face(poppins, '../fonts/poppins/Poppins-SemiBold', 600, normal);
+@include font-face(poppins, '../fonts/poppins/Poppins-Bold', 700, normal);
+
+// - - - Font families - - -
+
+$font-family-default: 'poppins', Helvetica, Arial, sans-serif;
+$font-family-title: $font-family-default;
+$poppins: $font-family-default;
+
+// Used in functions.sass only
+$function-size-default: 16;
+
+// Can be used for style
+$font-size-default: 16px;
+
+$line-height-default: 1.25;
+$text-color-default: $black;
+
+// header height for mobile
+$mobile-header-height: 62px;
+$tablet-header-height: 140px;
+$desktop-header-height: 131px;
+
+// Animation
+// ==========================================================================
+
+// Default transition time
+$trans-time: 0.2s;
+
+//  Settings
+// ==========================================================================
+
+// Under this threshold, the site enter the "mobile" resolutions
+// In px, no unit
+$mobile-threshold: 600px;
+$tablet-threshold: 1024px;
+
+$mobile-threshold-stripped: 600;
+$tablet-threshold-stripped: 1024;
+
+// The selector of the main content, used for styles that apply only to the body text, like lists
+// Replace 'main' by the appropriate selector for your framework, or you can define one yourself
+// Wordpress & Drupal: '.content' should work, or '.content article'
+// Magento: '.std'
+$content: 'main';
+
+// The selector for CMS WYSIWYG fields
+// Wordpress: #tinyMce
+// Drupal: .cke_editable
+$editor: '#tinyMce';

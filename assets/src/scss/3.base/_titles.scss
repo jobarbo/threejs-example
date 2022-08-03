@@ -1,0 +1,34 @@
+// ==========================================================================
+// Base - Titles
+// ==========================================================================
+h1,
+.title-1 {
+	@include title-1;
+}
+
+h2,
+.title-2 {
+	@include title-2;
+}
+
+h3,
+.title-3 {
+	@include title-3;
+}
+
+h4,
+.title-4 {
+	@include title-4;
+}
+
+h5,
+.tabs-title,
+.title-5 {
+	@include title-5;
+}
+
+h6,
+.drawer-title,
+.title-6 {
+	@include title-6;
+}

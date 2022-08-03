@@ -1,0 +1,32 @@
+.styleguide {
+	background-color: $white;
+	&__container,
+	&__title-container,
+	&__list-container,
+	&__text-container {
+		@include container;
+		padding-top: 2em;
+		padding-bottom: 2em;
+		&--black {
+			background-color: $black;
+		}
+		&--green {
+			background-color: $gray;
+		}
+	}
+	&__name {
+		color: $black;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: $white;
+	}
+	&__intro {
+		color: $white;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: $white;
+	}
+	&__wysiwyg-title {
+		color: $black;
+		-webkit-text-stroke-width: 1px;
+		-webkit-text-stroke-color: $white;
+	}
+}

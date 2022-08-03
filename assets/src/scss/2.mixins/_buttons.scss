@@ -1,0 +1,14 @@
+// ==========================================================================
+// MIXINS - Buttons
+// ==========================================================================
+
+// Buttons mixins
+@mixin button {
+	background-color: $black;
+	padding: 1.3em 1.5em;
+	font-size: 14px;
+	font-weight: 700;
+	color: white;
+	border-radius: 3px;
+	cursor: pointer;
+}
